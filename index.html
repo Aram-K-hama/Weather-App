@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="design.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <select name="lang" class="lang">
+        <option value="en" style="color: black;">English</option>
+        <option value="krd" style="color: black;">کوردی</option>
+    </select>
+    <header>
+        <h1 id="h1">Today's Weather</h1>
+    </header>
+
+    <main class="container">
+        <section class="container-box">
+            <i class='bx bxs-map' id="map"></i>
+            <input type="text" placeholder="insert location" oninput="inputSizeText()" id="inp">
+            <button class='bx bx-search-alt-2' id="search"></button>
+        </section>
+        <section class="weather">
+            <img src="./Images/cloudy.png">
+            <p class="tempreature">0 <span>°C</span></p>
+            <p class="description">Cloudy</p>
+        </section>
+        <section class="weather-detail">
+            <section class="wind">
+                <i class='bx bx-wind'></i>
+                <div class="text">
+                    <p class="wind-speed">0 Km/H</p>
+                    <p id="wind">Wind Speed</p>
+                </div>
+            </section>
+            <section class="humidity">
+                <i class='bx bx-water'></i>
+                <div class="text">
+                    <p class="humidity-ratio">0%</p>
+                    <p id="humidity">Humidity</p>
+                </div>
+            </section>
+        </section>
+        <section class="error">
+            <p id="errorMsg">Location not found !!!!!!!</p>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="JS/action.js"></script>
+    <script src="JS/translate.js"></script>
+</body>
+
+</html>
